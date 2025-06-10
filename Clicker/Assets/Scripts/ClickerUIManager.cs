@@ -36,7 +36,7 @@ public class ClickerUIManager : MonoBehaviour
         woodManaCntText = GameObject.Find("ManaWoodCntText").GetComponent<TextMeshProUGUI>();
         facilityShop = GameObject.Find("UI").GetComponent<FacilityShop>();
         shopPanel = GameObject.Find("ShopPanel").gameObject;
-        monsterPanel = GameObject.Find("MonsterCreatePanel").gameObject;
+        monsterPanel = GameObject.Find("MonsterView").gameObject;
         animator = shopPanel.GetComponent<Animator>();
     }
 
