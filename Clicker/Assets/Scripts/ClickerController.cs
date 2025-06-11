@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class ClickerController : MonoBehaviour
+[System.Serializable]
+public class ManaStone
 {
-    FacilityShop facilityShop;
-
     public enum STONE_MANA_TYPE
     {
         FIRE,
@@ -14,47 +13,42 @@ public class ClickerController : MonoBehaviour
         WOOD,
     }
 
-    [SerializeField] STONE_MANA_TYPE stoneManaType;
-    [SerializeField] List<Sprite> manaStoneSpriteList;
+    public STONE_MANA_TYPE stoneManaType;
+    public Sprite manaStoneSpriteList;
+}
 
-    public int fireManaCnt { get; private set; } = 0;
-    public int waterManaCnt { get; private set; } = 0;
-    public int woodManaCnt { get; private set; } = 0;
-    public int elementCnt { get; private set; } = 0;
-
+public class ClickerController : MonoBehaviour
+{
+    ManaStone manaStone;
+    [SerializeField] List<ManaStone> manaStones;
+    
     GameObject targetObj;
     public float clickrate = 0.5f;
 
-    public STONE_MANA_TYPE GetStoneManaType()
-    {
-        return stoneManaType;
-    }
+    ResourceManager resourceManager;
 
-    public void AddClickCnt()
+    // 魔鉱石をセット
+    void SetManaStone(ManaStone stone)
     {
-        facilityShop.facilityLv[0]++;
-    }
-
-    public void RemoveElementCnt(int cnt)
-    {
-        elementCnt -= cnt;
-    }
-
-    public void AddElementCnt(int cnt)
-    {
-        elementCnt += cnt;
+        manaStone = stone;
     }
 
     private void Start()
     {
-        facilityShop = GameObject.Find("UI").GetComponent<FacilityShop>();
+        resourceManager = GetComponent<ResourceManager>();
+        SetManaStone(manaStones[0]);
     }
 
     // Update is called once per frame
     void Update()
     {
         ManaStoneSprite();
+        Click();        
+    }
 
+    // クリック時の処理
+    void Click()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -62,50 +56,25 @@ public class ClickerController : MonoBehaviour
 
             if (hit.collider != null)
             {
-                //Debug.Log("レイの衝突を検知");
                 targetObj = hit.collider.gameObject;
-                //Debug.Log($"{targetObj.name} に衝突");
 
-                if(targetObj == this.gameObject)
+                if (targetObj == this.gameObject)
                 {
+                    resourceManager.ClickStone(manaStone);
                     StartCoroutine(ClickAnim());
-                    AddElementCnt(2 + facilityShop.facilityLv[0]);
-                    AddManaCnt();
-                    //Debug.Log("カウントをプラスしました");
                 }
             }
         }
-
-        if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.UpArrow))
-        {
-            elementCnt++;
-        }
     }
-
-    // 対応する各属性のマナを増加
-    void AddManaCnt()
-    {
-        switch (stoneManaType)
-        {
-            case STONE_MANA_TYPE.FIRE:
-                fireManaCnt += facilityShop.facilityLv[0];
-                break;
-            case STONE_MANA_TYPE.WATER:
-                waterManaCnt += facilityShop.facilityLv[0];
-                break;
-            case STONE_MANA_TYPE.WOOD:
-                woodManaCnt += facilityShop.facilityLv[0];
-                break;
-        }
-    }
-
+    
     // 魔鉱石のスプライトを変更
     void ManaStoneSprite()
     {
         SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = manaStoneSpriteList[(int)stoneManaType];
+        spriteRenderer.sprite = manaStone.manaStoneSpriteList;
     }
 
+    // クリック時のアニメーション
     IEnumerator ClickAnim()
     {
         float time = 0;//アニメーションの時間を記録.

@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 2845064602903447166}
   - component: {fileID: 8673445845740800332}
   - component: {fileID: 1112378250219633530}
+  - component: {fileID: 6321014981549422040}
   m_Layer: 5
   m_Name: MonsterButton
   m_TagString: Untagged
@@ -336,7 +337,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8673445845740800332}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6321014981549422040}
+        m_TargetAssemblyTypeName: MonsterButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6321014981549422040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3227739306148093792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584ffa4a304e8254cbb7e905a09abd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterNameText: {fileID: 3059854828524771729}
+  elementCntText: {fileID: 1941361516685261705}
+  fireCntText: {fileID: 4007973509751864253}
+  waterCntText: {fileID: 6766601201158509840}
+  woodCntText: {fileID: 8995131240286346834}
 --- !u!1 &3774608388634728379
 GameObject:
   m_ObjectHideFlags: 0
