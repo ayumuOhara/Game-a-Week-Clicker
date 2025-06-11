@@ -19,8 +19,8 @@ MonoBehaviour:
     fireManaCost: 10
     waterManaCost: 0
     woodManaCost: 0
-    elementGenarateCnt: 0.1
-    fireManaGenarateCnt: 0.2
+    elementGenarateCnt: 1
+    fireManaGenarateCnt: 1
     waterManaGenarateCnt: 0
     woodManaGenarateCnt: 0
   - monsterName: "\u30DF\u30BA\u30EF\u30E9\u30D3"
@@ -29,9 +29,9 @@ MonoBehaviour:
     fireManaCost: 0
     waterManaCost: 10
     woodManaCost: 0
-    elementGenarateCnt: 0.1
+    elementGenarateCnt: 1
     fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0.2
+    waterManaGenarateCnt: 1
     woodManaGenarateCnt: 0
   - monsterName: "\u30E2\u30EA\u30EF\u30E9\u30D3"
     monsterCnt: 0
@@ -39,11 +39,161 @@ MonoBehaviour:
     fireManaCost: 0
     waterManaCost: 0
     woodManaCost: 10
-    elementGenarateCnt: 0.1
+    elementGenarateCnt: 1
     fireManaGenarateCnt: 0
     waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0.2
-  - monsterName: 
+    woodManaGenarateCnt: 1
+  - monsterName: "\u30D2\u30CE\u30C8\u30EA"
+    monsterCnt: 0
+    elementCost: 420
+    fireManaCost: 300
+    waterManaCost: 45
+    woodManaCost: 45
+    elementGenarateCnt: 11
+    fireManaGenarateCnt: 8
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30A2\u30AA\u30CE\u30C8\u30EA"
+    monsterCnt: 0
+    elementCost: 420
+    fireManaCost: 45
+    waterManaCost: 300
+    woodManaCost: 45
+    elementGenarateCnt: 11
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 8
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30DF\u30C9\u30EA\u30C9\u30EA"
+    monsterCnt: 0
+    elementCost: 420
+    fireManaCost: 45
+    waterManaCost: 45
+    woodManaCost: 300
+    elementGenarateCnt: 11
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 8
+  - monsterName: "\u30AA\u30B3\u30C0\u30EB\u30DE"
+    monsterCnt: 0
+    elementCost: 5040
+    fireManaCost: 3800
+    waterManaCost: 570
+    woodManaCost: 570
+    elementGenarateCnt: 130
+    fireManaGenarateCnt: 104
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30CA\u30AD\u30C0\u30EB\u30DE"
+    monsterCnt: 0
+    elementCost: 5040
+    fireManaCost: 570
+    waterManaCost: 3800
+    woodManaCost: 570
+    elementGenarateCnt: 130
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 104
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30E9\u30AF\u30C0\u30EB\u30DE"
+    monsterCnt: 0
+    elementCost: 5040
+    fireManaCost: 570
+    waterManaCost: 570
+    woodManaCost: 3800
+    elementGenarateCnt: 130
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 104
+  - monsterName: "\u30D9\u30CB\u30A2\u30E9\u30B7"
+    monsterCnt: 0
+    elementCost: 45000
+    fireManaCost: 34000
+    waterManaCost: 5100
+    woodManaCost: 5100
+    elementGenarateCnt: 1500
+    fireManaGenarateCnt: 1200
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30BF\u30A4\u30D5\u30FC\u30F3"
+    monsterCnt: 0
+    elementCost: 45000
+    fireManaCost: 5100
+    waterManaCost: 34000
+    woodManaCost: 5100
+    elementGenarateCnt: 1500
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 1200
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30B9\u30B3\u30FC\u30EB"
+    monsterCnt: 0
+    elementCost: 45000
+    fireManaCost: 5100
+    waterManaCost: 5100
+    woodManaCost: 34000
+    elementGenarateCnt: 1500
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 1200
+  - monsterName: "\u30AA\u30D0\u30B1\u30C8\u30FC\u30C1"
+    monsterCnt: 0
+    elementCost: 360000
+    fireManaCost: 270000
+    waterManaCost: 40500
+    woodManaCost: 40500
+    elementGenarateCnt: 12000
+    fireManaGenarateCnt: 9600
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30B3\u30AA\u30EA\u30AA\u30CB"
+    monsterCnt: 0
+    elementCost: 360000
+    fireManaCost: 40500
+    waterManaCost: 270000
+    woodManaCost: 40500
+    elementGenarateCnt: 12000
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 9600
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30C4\u30CE\u30E0\u30B7"
+    monsterCnt: 0
+    elementCost: 360000
+    fireManaCost: 40500
+    waterManaCost: 40500
+    woodManaCost: 270000
+    elementGenarateCnt: 12000
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 9600
+  - monsterName: "\u30BD\u30E9\u30CE\u30AA\u30A6"
+    monsterCnt: 0
+    elementCost: 2560000
+    fireManaCost: 1920000
+    waterManaCost: 288000
+    woodManaCost: 288000
+    elementGenarateCnt: 200000
+    fireManaGenarateCnt: 160000
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30A6\u30DF\u30CE\u30AA\u30A6"
+    monsterCnt: 0
+    elementCost: 2560000
+    fireManaCost: 288000
+    waterManaCost: 1920000
+    woodManaCost: 288000
+    elementGenarateCnt: 200000
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 160000
+    woodManaGenarateCnt: 0
+  - monsterName: "\u30EA\u30AF\u30CE\u30AA\u30A6"
+    monsterCnt: 0
+    elementCost: 2560000
+    fireManaCost: 288000
+    waterManaCost: 288000
+    woodManaCost: 1920000
+    elementGenarateCnt: 200000
+    fireManaGenarateCnt: 0
+    waterManaGenarateCnt: 0
+    woodManaGenarateCnt: 160000
+  - monsterName: "\u30DF\u30DF\u30C3\u30AF"
     monsterCnt: 0
     elementCost: 0
     fireManaCost: 0
@@ -53,157 +203,7 @@ MonoBehaviour:
     fireManaGenarateCnt: 0
     waterManaGenarateCnt: 0
     woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
-    monsterCnt: 0
-    elementCost: 0
-    fireManaCost: 0
-    waterManaCost: 0
-    woodManaCost: 0
-    elementGenarateCnt: 0
-    fireManaGenarateCnt: 0
-    waterManaGenarateCnt: 0
-    woodManaGenarateCnt: 0
-  - monsterName: 
+  - monsterName: "\u30DE\u30AA\u30A6"
     monsterCnt: 0
     elementCost: 0
     fireManaCost: 0
