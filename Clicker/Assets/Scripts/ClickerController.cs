@@ -8,6 +8,7 @@ public class ManaStone
 {
     public enum STONE_MANA_TYPE
     {
+        ELEMENT,
         FIRE,
         WATER,
         WOOD,
@@ -21,7 +22,7 @@ public class ClickerController : MonoBehaviour
 {
     ManaStone manaStone;
     [SerializeField] List<ManaStone> manaStones;
-    
+
     GameObject targetObj;
     public float clickrate = 0.5f;
 
@@ -67,13 +68,6 @@ public class ClickerController : MonoBehaviour
         }
     }
     
-    // 魔鉱石のスプライトを変更
-    void ManaStoneSprite()
-    {
-        SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sprite = manaStone.manaStoneSpriteList;
-    }
-
     // クリック時のアニメーション
     IEnumerator ClickAnim()
     {
@@ -96,4 +90,12 @@ public class ClickerController : MonoBehaviour
         }
         gameObject.transform.localScale = new Vector2(0.7f, 0.7f);//スケールに誤差があるかもしれないので、ここで(1,1)に戻す.
     }
+
+    // 魔鉱石のスプライトを変更
+    void ManaStoneSprite()
+    {
+        SpriteRenderer spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = manaStone.manaStoneSpriteList;
+    }
+
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// 実行中用のデータ
 [System.Serializable]
 public class RuntimeMonsterData
 {
@@ -37,7 +38,7 @@ public class RuntimeMonsterData
 public class MonsterManager : MonoBehaviour
 {
     [SerializeField] Monster monster;
-    List<RuntimeMonsterData> runtimeData;
+    public List<RuntimeMonsterData> runtimeData;
 
     ResourceManager resourceManager;
 
@@ -45,26 +46,11 @@ public class MonsterManager : MonoBehaviour
     void Start()
     {
         resourceManager = GameObject.Find("ManaStone").GetComponent<ResourceManager>();
-        InvokeRepeating(nameof(GenerateResources), 1f, 1f);     // 毎秒リソースを作成
-
         runtimeData = new List<RuntimeMonsterData>();
-       foreach(var data in monster.monsterDatas)
+
+        foreach(var data in monster.monsterDatas)
         {
             runtimeData.Add(new RuntimeMonsterData(data));
-        }
-    }
-
-    void GenerateResources()
-    {
-        foreach (var data in runtimeData)
-        {
-            float cnt = data.monsterCnt;
-            resourceManager.AddResources(
-                data.elementGenarateCnt * cnt,
-                data.fireManaGenarateCnt * cnt,
-                data.waterManaGenarateCnt * cnt,
-                data.woodManaGenarateCnt * cnt
-            );
         }
     }
 
