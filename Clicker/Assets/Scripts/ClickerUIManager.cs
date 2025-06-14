@@ -9,10 +9,14 @@ using UnityEngine.EventSystems;
 
 public class ClickerUIManager : MonoBehaviour
 {
+    ClickerController clickerController;
+
     [SerializeField] Monster monster;
     [SerializeField] GameObject monsterCreateButton;
     [SerializeField] Shop shop;
     [SerializeField] GameObject itemBuyButton;
+
+    [SerializeField] List<GameObject> StoneTypeButtonList;
 
     ResourceManager resourceManager;
     TextMeshProUGUI elementCntText;
@@ -44,6 +48,7 @@ public class ClickerUIManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        clickerController = GameObject.Find("ManaStone").GetComponent<ClickerController>();
         resourceManager = GameObject.Find("ManaStone").GetComponent<ResourceManager>();
         elementCntText = GameObject.Find("ElementCntText").GetComponent<TextMeshProUGUI>();
         fireManaCntText = GameObject.Find("ManaFireCntText").GetComponent<TextMeshProUGUI>();
@@ -62,4 +67,14 @@ public class ClickerUIManager : MonoBehaviour
         woodManaCntText.text = resourceManager.woodManaCnt.ToString("F0");
     }
 
+    void ActiveStoneButton()
+    {
+        for(int i = 0; i <= StoneTypeButtonList.Count; i++)
+        {
+            if(clickerController.manaStones[i].hasType == true)
+            {
+                StoneTypeButtonList[i].SetActive(true);
+            }
+        }
+    }
 }

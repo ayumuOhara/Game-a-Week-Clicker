@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 [System.Serializable]
 public class ManaStone
@@ -16,12 +17,13 @@ public class ManaStone
 
     public STONE_MANA_TYPE stoneManaType;
     public Sprite manaStoneSpriteList;
+    public bool hasType;
 }
 
 public class ClickerController : MonoBehaviour
 {
-    ManaStone manaStone;
-    [SerializeField] List<ManaStone> manaStones;
+    public ManaStone manaStone;
+    [SerializeField] public List<ManaStone> manaStones;
 
     GameObject targetObj;
     public float clickrate = 0.5f;
@@ -98,4 +100,9 @@ public class ClickerController : MonoBehaviour
         spriteRenderer.sprite = manaStone.manaStoneSpriteList;
     }
 
+    // ñÇçzêŒÇÃëÆê´ïœçX
+    public void OnClickStoneButton(int num)
+    {
+        manaStone = manaStones[num];
+    }
 }

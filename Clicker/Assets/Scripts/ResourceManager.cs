@@ -8,7 +8,7 @@ public class ResourceManager : MonoBehaviour
 {
     MonsterManager monsterManager;
 
-    public float elementCnt { get; private set; } = 100000000;
+    public float elementCnt { get; private set; } = 0;
     public float fireManaCnt { get; private set; } = 0;
     public float waterManaCnt { get; private set; } = 0;
     public float woodManaCnt { get; private set; } = 0;

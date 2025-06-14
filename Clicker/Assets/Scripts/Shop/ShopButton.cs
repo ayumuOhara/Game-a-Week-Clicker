@@ -6,6 +6,7 @@ public class ShopButton : MonoBehaviour
 {
     ShopManager shopManager;
     ResourceManager resourceManager;
+    ClickerController clickerController;
 
     [SerializeField] TextMeshProUGUI itemNameText;
     [SerializeField] TextMeshProUGUI elementCntText;
@@ -14,6 +15,7 @@ public class ShopButton : MonoBehaviour
 
     public void Initialize(ShopData data, int index)
     {
+        clickerController = GameObject.Find("ManaStone").GetComponent<ClickerController>();
         resourceManager = GameObject.Find("ManaStone").GetComponent<ResourceManager>();
         shopManager = GameObject.Find("ShopManager").GetComponent<ShopManager>();
         itemIndex = index;
@@ -35,6 +37,21 @@ public class ShopButton : MonoBehaviour
                 if(itemIndex >= 3 && itemIndex <= 7)
                 {
                     shopManager.BuyTools();
+                }
+
+                switch (itemIndex)
+                {
+                    case 0:
+                        clickerController.manaStones[1].hasType = true;
+                        break;
+                    case 1:
+                        clickerController.manaStones[2].hasType = true;
+                        break;
+                    case 2:
+                        clickerController.manaStones[3].hasType = true;
+                        break;
+                    default:
+                        break;
                 }
 
                 Button button = GetComponent<Button>();
