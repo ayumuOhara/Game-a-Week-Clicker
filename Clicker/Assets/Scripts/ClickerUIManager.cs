@@ -5,6 +5,7 @@ using System.Collections;
 using TMPro;
 using UnityEditor.UI;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class ClickerUIManager : MonoBehaviour
 {
@@ -60,4 +61,5 @@ public class ClickerUIManager : MonoBehaviour
         waterManaCntText.text = resourceManager.waterManaCnt.ToString("F0");
         woodManaCntText.text = resourceManager.woodManaCnt.ToString("F0");
     }
+
 }
